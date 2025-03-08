@@ -7,11 +7,11 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    // eslint-disable-next-line react/jsx-no-undef
     <Router>
       <div className="App">
         < Navbar />
 
+<h1>Testing</h1>
       </div>
     </Router>
   );
