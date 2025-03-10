@@ -21,8 +21,8 @@ function Navbarcompo() {
           </Link>
         </div>
 
-        <Link to="/src/components/LogIn.js" className="nav_links">
-          LogIn
+        <Link to="/LogIn" className="nav_links">
+          Log-In
         </Link>
         <Link to="/LogInForm" className="nav_links">
           LogOut
