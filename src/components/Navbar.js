@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React from 'react';
 
-function Navbar() {
+function Navbarcompo() {
   return (
     <div className="navbar">
       <h1>Student Api</h1>
@@ -13,4 +13,4 @@ function Navbar() {
   );
 };
 
-export default Navbar;
+export default Navbarcompo;
