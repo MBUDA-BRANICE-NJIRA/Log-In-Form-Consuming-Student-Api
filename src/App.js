@@ -10,7 +10,6 @@ function App() {
     <Router>
       <div className="App">
         < Navbar />
-       <h1>Testing</h1>
       </div>
     </Router>
   );
