@@ -5,13 +5,19 @@
 }
 .navbar{
   display: flex;
-  background-color:  rgba(0, 0, 0, 0.664);
+  background-color:  rgb(65, 59, 59);
   color: white;
   font-family: 'Times New Roman', Times, serif;
   font-size: 15px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.navbar h1 {
+  margin-left: 25px;
+  padding: 2px;
 }
 .navbar .nav_links{
-  margin-left: 14px;
+  margin-left: 24px;
   margin-top: 40px;
   padding: 20px;
   color: white;
@@ -23,5 +29,12 @@
   margin-left: 14px;
   margin-top: 30px;
 }
+.icon {
+  vertical-align: middle;
+  font-size: 1.0em;
+  margin-bottom: -0.1em;
+  padding: 2px;
+}
+
 
 
