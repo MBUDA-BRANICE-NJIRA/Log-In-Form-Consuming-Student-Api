@@ -6,8 +6,9 @@ function Navbarcompo() {
   return (
     <div className="navbar">
       <h1>Student Api</h1>
+
       <div className="links">
-        <Link to="/AddStudent" className="nav_links">
+        <Link to="/" className="nav_links">
           Student
           <AiFillCaretDown className="icon" />
         </Link>
