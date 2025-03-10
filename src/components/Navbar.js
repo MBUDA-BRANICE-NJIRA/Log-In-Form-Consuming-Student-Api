@@ -21,7 +21,7 @@ function Navbarcompo() {
           </Link>
         </div>
 
-        <Link to="/LogInForm" className="nav_links">
+        <Link to="/src/components/LogIn.js" className="nav_links">
           LogIn
         </Link>
         <Link to="/LogInForm" className="nav_links">
