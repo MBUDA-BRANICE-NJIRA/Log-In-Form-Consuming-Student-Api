@@ -13,11 +13,11 @@ function Navbarcompo() {
           <AiFillCaretDown className="icon" />
         </Link>
 
-        <div className="dropdown-menu">
+        <div className ="dropdown-menu">
           <Link to="/All-Students" className="dropdown-link">
             All Students
           </Link>
-          <Link to="/Add-Student" className="dropdown-link">
+          <Link to ="/Add-Student" className="dropdown-link">
             Add Student
           </Link>
         </div>
