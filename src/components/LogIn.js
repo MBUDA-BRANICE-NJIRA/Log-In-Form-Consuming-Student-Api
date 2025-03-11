@@ -4,11 +4,11 @@ import { FaUser, FaLock } from "react-icons/fa";
 
 const LoginRegister = () => {
 
-  const [action, setAction] = useState('');
+  const [action] = useState('');
 
-  const registerLink = () => {
-    setAction("active");
-  };
+  // const registerLink = () => {
+  //   setAction("active");
+  // };
  
   return (
     <div className={`Wrapper ${action}`}>

@@ -12,12 +12,19 @@ function App() {
       <div className="App">
         < Navbar />
         <Switch>
+
           <Route path="/LogIn">
           <Login/>
+
           </Route>
           <Route path='/register'>
           <Registercompo/>
           </Route>
+
+          <Route path='/table'>
+        
+          </Route>
+
         </Switch>
       </div>
     </Router>
