@@ -235,6 +235,42 @@ form .register-link {
   text-align: center;
 }
 
+/* Action Column Styles */
+.action-column {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Edit Button Styles */
+.edit-button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #3e8e41;
+}
+
+/* Delete Button Styles */
+.delete-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
 
 
 

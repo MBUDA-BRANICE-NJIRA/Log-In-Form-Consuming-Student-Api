@@ -5,6 +5,16 @@ function Tablecompo() {
       ].map(callback)
     };
   
+    const handleEdit = (id) => {
+      // your edit logic here
+      console.log(`Edit button clicked for id: ${id}`);
+    };
+  
+    const handleDelete = (id) => {
+      // your delete logic here
+      console.log(`Delete button clicked for id: ${id}`);
+    };
+  
     return (
       <div className="container">
         <h1>All Students Details</h1>
@@ -25,7 +35,12 @@ function Tablecompo() {
                 <td>{r.lastname}</td>
                 <td>{r.gender}</td>
                 <td className="action-column">
-                  {/* your action buttons here */}
+                  <button className="edit-button" onClick={() => handleEdit(r.id)}>
+                    Edit
+                  </button>
+                  <button className="delete-button" onClick={() => handleDelete(r.id)}>
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
