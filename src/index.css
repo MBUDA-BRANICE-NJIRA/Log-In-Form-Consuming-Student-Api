@@ -189,7 +189,51 @@ form .register-link {
 .register-link p a:hover {
   text-decoration: underline;
 }
+/* Table Container Styles */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+/* Table Styles */
+.table-border {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Table Header Styles */
+.table-border thead tr {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-border thead tr th {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Table Body Styles */
+.table-border tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.table-border tbody tr td {
+  padding: 10px;
+}
+
+/* Table Body Hover Styles */
+.table-border tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Table Action Column Styles */
+.action-column {
+  text-align: center;
+}
 
 
 
