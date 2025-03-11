@@ -9,13 +9,7 @@ const LoginRegister = () => {
   const registerLink = () => {
     setAction("active");
   };
-  
-  // const loginLink = () => {
-  //   setAction("");
-  // };
-
-  
-
+ 
   return (
     <div className={`Wrapper ${action}`}>
       <div className="form-box login">
