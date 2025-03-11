@@ -1,63 +1,40 @@
-// import React from "react";
-// import { Table } from "react-bootstrap";
-// // import DataTable from "react-data-table-component";
+import React from "react";
 
-// function Tablecompo() {
-//   // const columns = [
-//   //   {
-//   //     name: "Name",
-//   //     selector: (row) => row.Name,
-//   //   },
-//   //   {
-//   //     name: "lastName",
-//   //     selector: (row) => row.lastName,
-//   //   },
-//   //   {
-//   //     name: "Gender",
-//   //     selector: (row) => row.Gender,
-//   //   },
-//   //   {
-//   //     name: "Action",
-//   //     selector: (row) => row.Action,
-//   //   },
-//   // ];
-//   const data = [
-//     {
-//       id: 1,
-//       Name: "edwi",
-//       lastName: "Kimani",
-//       Gender: "Malwe",
-//       Action: "Esit",
-//     },
-//   ];
-//   return (
-//     <div className="container">
-//      {data.map(items=>{
-//       return(
-//         <Table>
-//           <thead>
-//           <tr>
-//             <th>id</th>
-//             <th>Name</th>
-//             <th>Lastname</th>
-//             <th>Gender</th>
-//             <th>action</th>
-//           </tr>
-//           </thead>
-//           <tbody>
-//           <tr>
-//             <td>{items.id}</td>
-//             <td>{items.Name}</td>
-//             <td>{items.lastName}</td>
-//             <td>{items.Gender}</td>
-//             <td>{items.Action}</td>
-//           </tr>
-//           </tbody>
-//         </Table>
-//       );
-//      })}
-//     </div>
-//   );
-// }
 
-// export default Tablecompo;
+
+function Tablecompo() {
+  const records = {
+    body: (callback) => [
+    
+    ].map(callback)
+  };
+  
+  return (
+    <div className="container">
+        <div className="AllStudents">
+            <h1>All Students Details</h1>
+            <table className="table-border">
+                <thead>
+                    <tr>Firstname</tr>
+                    <tr>Lastname</tr>
+                    <tr>Gender</tr>
+                    <tr>Action</tr>
+                </thead>
+
+                <tbody>
+                    {records.body((r, i) =>(
+                        <tr key={i}>
+                            <td>{r.firstname}</td>
+                            <td>{r.lastname}</td>
+                            <td>{r.gender}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    
+    </div>
+  );
+}
+
+export default Tablecompo;
