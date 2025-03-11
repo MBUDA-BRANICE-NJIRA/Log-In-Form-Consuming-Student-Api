@@ -38,10 +38,10 @@ const LoginRegister = () => {
 
           <div className="register-link">
             <p>
-              Don't have an account?{" "}
-              <a href="n#" onClick={registerLink}>
+              Don't have an account?
+              <a href="/register">
                 Register
-              </a>{" "}
+              </a>
             </p>
           </div>
           

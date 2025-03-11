@@ -1,25 +1,24 @@
 
 import './App.css';
-// import React, { useEffect } from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
 import Navbar from './components/Navbar';
-// import { Route } from 'react-router-dom';
 import Login from './components/LogIn';
-
+import Registercompo from './components/Register';
 
 function App() {
-
-
 
   return (
     <Router>
       <div className="App">
         < Navbar />
-        <switch>
+        <Switch>
           <Route path="/LogIn">
           <Login/>
           </Route>
-        </switch>
+          <Route path='/register'>
+          <Registercompo/>
+          </Route>
+        </Switch>
       </div>
     </Router>
   );

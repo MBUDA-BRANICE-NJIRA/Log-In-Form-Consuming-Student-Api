@@ -99,43 +99,7 @@
  padding: 40px;
 }
 
-.Wrapper .form-box.login {
-  transition: translate .18s ease;
-  translate: 0;
-}
 
-.Wrapper .active .form-box.login {
-  transition: none;
-  translate: -400px;
-}
-
-.Wrapper .form-box .register {
-  position: absolute;
-  transition: none;
-  translate: 400px;
-
-}
-
-.Wrapper .active .form-box.register {
-  transition: translate .18s ease;
-  translate: 0;
-}
-
-.form-box.login {
-  display: block;
-}
-
-.form-box.register {
-  display: none;
-}
-
-.Wrapper.active .form-box.login {
-  display: none;
-}
-
-.Wrapper.active .form-box.register {
-  display: block;
-}
 
 form h1 {
   font-size: 36px;
