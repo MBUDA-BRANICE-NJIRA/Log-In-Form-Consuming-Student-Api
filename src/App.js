@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Login from './components/LogIn';
 import Registercompo from './components/Register';
+import Tablecompo from './components/AllStudentTable';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
@@ -21,8 +23,8 @@ function App() {
           <Registercompo/>
           </Route>
 
-          <Route path='/table'>
-        
+          <Route path='/AllStudentTable'>
+          <Tablecompo />
           </Route>
 
         </Switch>
