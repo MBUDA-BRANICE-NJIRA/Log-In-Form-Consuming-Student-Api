@@ -1,22 +1,25 @@
 
 import './App.css';
-import React from 'react';
-import {BrowserRouter as Router, } from 'react-router-dom';
+// import React, { useEffect } from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 // import { Route } from 'react-router-dom';
-// import LoginRegister from './components/LogIn';
+import Login from './components/LogIn';
 
 
 function App() {
+
+
+
   return (
     <Router>
       <div className="App">
         < Navbar />
-        {/* <switch>
-          <Route path="LogIn">
-          <LoginRegister />
+        <switch>
+          <Route path="/LogIn">
+          <Login/>
           </Route>
-        </switch> */}
+        </switch>
       </div>
     </Router>
   );
