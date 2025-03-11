@@ -1,3 +1,5 @@
+
+
 function Tablecompo() {
     const records = {
       body: (callback) => [
@@ -34,10 +36,12 @@ function Tablecompo() {
                 <td>{r.firstname}</td>
                 <td>{r.lastname}</td>
                 <td>{r.gender}</td>
+                
                 <td className="action-column">
                   <button className="edit-button" onClick={() => handleEdit(r.id)}>
                     Edit
                   </button>
+
                   <button className="delete-button" onClick={() => handleDelete(r.id)}>
                     Delete
                   </button>
