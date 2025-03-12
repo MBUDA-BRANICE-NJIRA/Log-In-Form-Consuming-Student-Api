@@ -22,7 +22,7 @@ const UpdateStudent = () => {
   useEffect(() => {
     const fetchStudent = async () => {
       try {
-        const response = await axios.get(http://localhost:4000/students/getStudent/${studentId});
+        const response = await axios.get(`http://localhost:4000/students/getStudent/${studentId}`);
         setFormData({
           firstName: response.data.firstName || "",
           lastName: response.data.lastName || "",
@@ -48,7 +48,7 @@ const UpdateStudent = () => {
     setSubmitting(true);
 
     try {
-      await axios.put(http:localhost:4000/students/updateStudent/${studentId}, formData);
+      await axios.put(`http://localhost:4000/students/updateStudent/${studentId}`, formData);
       toast.success("Student updated successfully!");
       setTimeout(() => history.push("/"), 2000);
     } catch (err) {
@@ -64,7 +64,7 @@ const UpdateStudent = () => {
     
     if (confirmDelete) {
       try {
-        await axios.delete(http:localhost:4000/students/deleteStudent/${studentId});
+        // await axios.delete(http:localhost:4000/students/deleteStudent/${studentId});
         toast.success("Student deleted successfully!");
         setTimeout(() => history.push("/"), 2000);
       } catch (err) {
