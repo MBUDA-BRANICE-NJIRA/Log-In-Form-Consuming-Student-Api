@@ -31,6 +31,8 @@ function Tablecompo() {
           </thead>
   
           <tbody>
+          {/* This the records body section */}
+          
             {records.body((r, i) => (
               <tr key={i}>
                 <td>{r.firstname}</td>
