@@ -1,7 +1,11 @@
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import React ,{useEffect, useState} from "react";
+import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-toastify/dist/ReactToastify.css";
 
-export default function AllStudentTable() {
+export default function StudentsList() {
   const [students, setStudents] = useState([]);
   const [refresh, setRefresh] = useState(false); // 👈 Add refresh state
 
@@ -13,7 +17,7 @@ export default function AllStudentTable() {
     const token = localStorage.getItem("token");
 
     try {
-      const response = await axios.get("http://localhost:4000/api/students/getAllStudent", {
+      const response = await axios.get("http://localhost:5000/api/students/getAllStudents", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -29,47 +33,65 @@ export default function AllStudentTable() {
 
   // Function to refresh student list
   const handleUpdate = () => {
-    setRefresh(prev => !prev); // 👈 Trigger a re-fetch
-  };
+    setRefresh(prev => !prev); // 👈 Trigger a re-fetch
+  };
 
-
-  
-    return (
-      <div className="container">
-        <h1>All Students Details</h1>
-        <table className="table-border">
-          <thead>
-            <tr>
-              <th>Firstname</th>
-              <th>Lastname</th>
-              <th>Gender</th>
-              <th>Action</th>
+  return (
+    <div className="container mt-5">
+      <h2 className="text-center mb-4 text-primary">Students List</h2>
+      <table className="table table-striped table-hover shadow-lg">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+        <>
+        {students.map((student, index) => {
+          return (
+            <tr key={index}>
+              <td>{student.firstName}</td>
+              <td>{student.lastName}</td>
+              <td>{student.Gender}</td>
+              <td>
+                <div className="dropdown">
+                  <button 
+                    className="btn btn-secondary dropdown-toggle" 
+                    type="button" 
+                    id={`dropdownMenuButton${index}`} 
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false"
+                  >
+                    Actions
+                  </button>
+                  <ul className="dropdown-menu" aria-labelledby={`dropdownMenuButton${index}`}>
+                    <li>
+                      <Link className="dropdown-item" to={`/edit-student/${student.id || student.student_id || student._id}`}>
+                        Edit Student
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to={`/student-details/${student.id || student.student_id || student._id}`}>
+                        View Details
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to={`/delete-student/${student.id || student.student_id || student._id}`}>
+                        Delete Student
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </td>
             </tr>
-          </thead>
-  
-          <tbody>
-          {/* This the records body section */}
-          
-            {records.body((r, i) => (
-              <tr key={i}>
-                <td>{r.firstname}</td>
-                <td>{r.lastname}</td>
-                <td>{r.gender}</td>
-                
-                <td className="action-column">
-                  <button className="edit-button" onClick={() => handleEdit(r.id)}>
-                    Edit
-                  </button>
-
-                  <button className="delete-button" onClick={() => handleDelete(r.id)}>
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    );
-  }
-  
+          );
+        })}
+        </>
+        </tbody>
+      </table>
+    </div>
+  );
+}
