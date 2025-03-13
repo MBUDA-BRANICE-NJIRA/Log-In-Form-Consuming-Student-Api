@@ -38,7 +38,7 @@ export default function StudentsList() {
 
   return (
     <div className="container mt-5">
-      <h2 className="text-center mb-4 text-primary">Students List</h2>
+      <h2 className="text-center mb-4 text-primary">All Student Details</h2>
       <table className="table table-striped table-hover shadow-lg">
         <thead>
           <tr>
