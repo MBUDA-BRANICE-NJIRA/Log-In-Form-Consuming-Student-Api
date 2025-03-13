@@ -31,10 +31,10 @@ export default function StudentsList() {
     }
   };
 
-  // Function to refresh student list
-  const handleUpdate = () => {
-    setRefresh(prev => !prev); // 👈 Trigger a re-fetch
-  };
+  // // Function to refresh student list
+  // const handleUpdate = () => {
+  //   setRefresh(prev => !prev); // 👈 Trigger a re-fetch
+  // };
 
   return (
     <div className="container mt-5">

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Login from './components/LogIn';
 import Registercompo from './components/Register';
 import Tablecompo from './components/AllStudentTable';
+import AddStudent from './components/AddStudent';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
 
           <Route path='/AllStudentTable'>
           <Tablecompo />
+          </Route>
+
+          <Route path='/AddStudent'>
+          <AddStudent />
           </Route>
 
         </Switch>
