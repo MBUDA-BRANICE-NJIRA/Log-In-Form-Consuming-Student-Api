@@ -1,21 +1,38 @@
+import axios from "axios";
+import React ,{useEffect, useState} from "react";
+
+export default function AllStudentTable() {
+  const [students, setStudents] = useState([]);
+  const [refresh, setRefresh] = useState(false); // 👈 Add refresh state
+
+  useEffect(() => {
+    fetchStudents();
+  }, [refresh]); // 👈 Fetch students when refresh changes
+
+  const fetchStudents = async () => {
+    const token = localStorage.getItem("token");
+
+    try {
+      const response = await axios.get("http://localhost:4000/api/students/getAllStudent", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      setStudents(response.data);
+    } catch (error) {
+      toast.error("Failed to fetch students", {
+        position: "top-right",
+        autoClose: 3000,
+      });
+    }
+  };
+
+  // Function to refresh student list
+  const handleUpdate = () => {
+    setRefresh(prev => !prev); // 👈 Trigger a re-fetch
+  };
 
 
-function Tablecompo() {
-    const records = {
-      body: (callback) => [
-        // your data here
-      ].map(callback)
-    };
-  
-    const handleEdit = (id) => {
-      // your edit logic here
-      console.log(`Edit button clicked for id: ${id}`);
-    };
-  
-    const handleDelete = (id) => {
-      // your delete logic here
-      console.log(`Delete button clicked for id: ${id}`);
-    };
   
     return (
       <div className="container">
@@ -56,4 +73,3 @@ function Tablecompo() {
     );
   }
   
-  export default Tablecompo;
