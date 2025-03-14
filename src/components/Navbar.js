@@ -15,7 +15,7 @@ function Navbarcompo() {
         </Link>
 
         <div className ="dropdown-menu">
-          <Link to="/AllStudentTable" className="dropdown-link">
+          <Link to ="/AllStudentTable" className="dropdown-link">
             All Students
           </Link>
           <Link to = "/AddStudent" className="dropdown-link">
