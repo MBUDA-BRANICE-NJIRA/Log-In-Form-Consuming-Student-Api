@@ -18,15 +18,15 @@ function Navbarcompo() {
           <Link to="/AllStudentTable" className="dropdown-link">
             All Students
           </Link>
-          <Link to ="/AddStudent" className="dropdown-link">
+          <Link to = "/AddStudent" className="dropdown-link">
             Add Student
           </Link>
         </div>
 
-        <Link to="/LogIn" className="nav_links">
+        <Link to = "/LogIn" className="nav_links">
           Log-In
         </Link>
-        <Link to="/LogInForm" className="nav_links">
+        <Link to = "/LogInForm" className="nav_links">
           LogOut
         </Link>
       </div>
