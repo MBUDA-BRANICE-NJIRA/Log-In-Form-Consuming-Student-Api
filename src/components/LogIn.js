@@ -11,12 +11,12 @@ const LoginRegister = () => {
   // };
  
   return (
-    <div className={`Wrapper ${action}`}>
+    <div className = {`Wrapper ${action}`}>
       <div className="form-box login">
         <form action="">
           <h1>Login</h1>
 
-          <div className="input-box">
+          <div className = "input-box">
             <input type="text" placeholder="Username" required />
             <FaUser className="icon" />
           </div>
