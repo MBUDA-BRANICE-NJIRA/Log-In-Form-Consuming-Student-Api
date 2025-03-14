@@ -4,7 +4,7 @@ import { AiFillCaretDown } from "react-icons/ai";
 
 function Navbarcompo() {
   return (
-    <div className="navbar">
+    <div className = "navbar">
       
       <h1>Student Api</h1>
 
