@@ -62,7 +62,7 @@ export default function StudentsList() {
                   <button 
                     className="btn btn-secondary dropdown-toggle" 
                     type="button" 
-                    id={`dropdownMenuButton${index}`} 
+                    id = {`dropdownMenuButton${index}`} 
                     data-bs-toggle="dropdown" 
                     aria-expanded="false"
                   >
