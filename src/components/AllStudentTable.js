@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function StudentsList() {
   const [students, setStudents] = useState([]);
-  const [refresh, setRefresh] = useState(false); // 👈 Add refresh state
+  const [refresh] = useState(false); // 👈 Add refresh state
 
   useEffect(() => {
     fetchStudents();
